@@ -18,7 +18,7 @@ section {
 </head>
 
 <body style='width:100%; height:100%; border:0; margin:0; padding:0; background: linear-gradient(#ADD8E6 1%,#4682B4 50%, White);'>
-	<X3D style="width:1024px; height:768px" id="x3d" xmlns="https://www.x3dom.org/x3dom">
+	<X3D style="width:100%; height:100%" id="x3d" xmlns="https://www.x3dom.org/x3dom">
 		<scene>
 			<Background skyAngle='2' skyColor='0.6 0.4 0.3 1 1 1'></Background>
 			<Viewpoint position='-12 2.8 10' orientation='0 -1 0 0.8' fieldOfView='1.4'></Viewpoint>
@@ -145,44 +145,6 @@ section {
 							<OrientationInterpolator DEF="OrientInt" key="0 0.5 1" keyValue="1 0 0 0.18, 1 0 0 -0.2, 1 0 0 0.18"></OrientationInterpolator>
 							<ROUTE fromNode="time2" fromField="fraction_changed" toNode="OrientInt" toField="set_fraction"></ROUTE>
 							<ROUTE fromNode="OrientInt" fromField="value_changed" toNode="plot" toField="set_rotation"></ROUTE>
-
-							<TimeSensor DEF="time3" cycleInterval="5" loop="true"></TimeSensor>
-							<ScalarInterpolator DEF="ScInt" key="0 0.5 1" keyValue="
-							2 2 2 2 2 2 2 2 2 1 
-							2 2 1 1 1 1 2 1 2 1 
-							2 2 2 1 2 2 2 1 2 1 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 2 2 2 2 1 1 1 
-							1 2 2 2 1 1 2 1 1 2 
-							2 1 1 1 2 1 2 2 1 2 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 1 1 2 2 2 2 1 
-							1 2 1 1 1 2 2 1 2 2
-
-							2 2 2 2 2 2 2 2 2 1 
-							2 2 1 1 1 1 2 1 2 1 
-							2 2 2 1 2 2 2 1 2 1 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 2 2 2 2 1 1 1 
-							1 2 2 2 1 1 2 1 1 2 
-							1 2 2 2 1 2 1 1 2 1 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 1 1 2 2 2 2 1 
-							1 2 1 1 1 2 2 1 2 2
-
-							2 2 2 2 2 2 2 2 2 1 
-							2 2 1 1 1 1 2 1 2 1 
-							2 2 2 1 2 2 2 1 2 1 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 2 2 2 2 1 1 1 
-							1 2 2 2 1 1 2 1 1 2 
-							2 1 1 1 2 1 2 2 1 2 
-							2 1 1 1 2 2 1 2 1 1 
-							1 1 1 1 1 2 2 2 2 1 
-							1 2 1 1 1 2 2 1 2 2
-							"></ScalarInterpolator>
-							<ROUTE fromNode="time3" fromField="fraction_changed" toNode="ScInt" toField="set_fraction"></ROUTE>
-							<ROUTE fromNode="ScInt" fromField="value_changed" toNode="voln" toField="set_height"></ROUTE>
 		</scene>
 	</x3d>
 </body>
