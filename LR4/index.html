@@ -13,8 +13,10 @@ section {
 	<meta charset="utf-8">
 	</meta>
 	<title>LR№4_V.A.Sgibnev_4743</title>
-	<script src="http://www.x3dom.org/download/1.5/x3dom-full.js"></script>                
-    <link rel="stylesheet" href="http://www.x3dom.org/download/1.5/x3dom.css">
+	<link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css" />
+   	<script src="https://www.x3dom.org/download/dev/x3dom-full.js"></script>
+    <link rel="stylesheet" href="../css/custom.css" />
+    <script src="../js/custom.js"></script>
 </head>
 
 <body style='width:100%; height:100%; border:0; margin:0; padding:0; background: linear-gradient(#ADD8E6 1%,#4682B4 50%, White);'>
@@ -131,21 +133,17 @@ section {
 			<Inline url="bird.x3d"></Inline>
 			</Transform>
 							<TimeSensor DEF="time" cycleInterval="5" loop="true"></TimeSensor>
-                            
 							<PositionInterpolator DEF="move" key="0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1" keyValue="-3 6 -3, -4 6 0, -3 6 3, 0 6 4, 3 6 3, 4 6 0, 3 6 -3, 0 6 -4, -3 6 -3"></PositionInterpolator>
                             <Route fromNode="time" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
                             <Route fromNode="move" fromField="value_changed" toNode="bird" toField="translation"></Route>
-
 							<OrientationInterpolator DEF="OrientInt" key="0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1" keyValue="0 1 0 2.8, 0 1 0 3.4, 0 1 0 4, 0 1 0 4.6, 0 1 0 -0.6, 0 1 0 0, 0 1 0 0.8, 0 1 0 1.6, 0 1 0 2.8"></OrientationInterpolator>
 							<ROUTE fromNode="time" fromField="fraction_changed" toNode="OrientInt" toField="set_fraction"></ROUTE>
 							<ROUTE fromNode="OrientInt" fromField="value_changed" toNode="bird" toField="set_rotation"></ROUTE>
 
 							<TimeSensor DEF="time2" cycleInterval="5" loop="true"></TimeSensor>
-
 							<PositionInterpolator DEF="move" key="0 0.5 1" keyValue="1 1.4 0, 1 0.7 3, 1 1.4 0"></PositionInterpolator>
                             <Route fromNode="time2" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
                             <Route fromNode="move" fromField="value_changed" toNode="plot" toField="translation"></Route>
-
 							<OrientationInterpolator DEF="OrientInt" key="0 0.5 1" keyValue="1 0 0 0.18, 1 0 0 -0.2, 1 0 0 0.18"></OrientationInterpolator>
 							<ROUTE fromNode="time2" fromField="fraction_changed" toNode="OrientInt" toField="set_fraction"></ROUTE>
 							<ROUTE fromNode="OrientInt" fromField="value_changed" toNode="plot" toField="set_rotation"></ROUTE>
