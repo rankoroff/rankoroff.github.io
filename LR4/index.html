@@ -147,7 +147,7 @@ section {
 							<ROUTE fromNode="OrientInt" fromField="value_changed" toNode="plot" toField="set_rotation"></ROUTE>
 
 							<TimeSensor DEF="time3" cycleInterval="5" loop="true"></TimeSensor>
-							<ScalarInterpolator DEF="ScInt" key="0 .5 1" keyValue="
+							<ScalarInterpolator DEF="ScInt" key="0 0.5 1" keyValue="
 							2 2 2 2 2 2 2 2 2 1 
 							2 2 1 1 1 1 2 1 2 1 
 							2 2 2 1 2 2 2 1 2 1 
@@ -165,7 +165,7 @@ section {
 							2 1 1 1 2 2 1 2 1 1 
 							1 1 1 2 2 2 2 1 1 1 
 							1 2 2 2 1 1 2 1 1 2 
-							2 1 1 1 2 1 2 2 1 2 
+							1 2 2 2 2 1 2 2 1 2 
 							2 1 1 1 2 2 1 2 1 1 
 							1 1 1 1 1 2 2 2 2 1 
 							1 2 1 1 1 2 2 1 2 2
@@ -182,7 +182,7 @@ section {
 							1 2 1 1 1 2 2 1 2 2
 							"></ScalarInterpolator>
 							<ROUTE fromNode="time3" fromField="fraction_changed" toNode="ScInt" toField="set_fraction"></ROUTE>
-							<ROUTE fromNode="ScInt" fromField="value_changed" toNode="voln" toField="set_transparency"></ROUTE>
+							<ROUTE fromNode="ScInt" fromField="value_changed" toNode="voln" toField="set_height"></ROUTE>
 		</scene>
 	</x3d>
 </body>
