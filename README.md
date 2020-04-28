@@ -1,4 +1,4 @@
 ﻿# LabR
 
 * ([LR4](https://rankoroff.github.io/LR4/))
-* ([LR5](https://rankoroff.github.io/LR5/))
+* ([LR5](https://rankoroff.github.io/lr5/))
