@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<style>
+    section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+</style>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>LR№5_V.O.Skryabin_4743</title>
+    <link rel="stylesheet" href="http://x3dom.org/release/x3dom.css" />
+    <script src="http://x3dom.org/release/x3dom-full.js"></script>
+    
+</head>
+<body style='width:100%; height:100%; border:0; margin:0; padding:0; background: linear-gradient(#ADD8E6 1%,#4682B4 50%, White);'>
+    <script>
+        document.onload = function () {
+
+            document.getElementById("play").onclick = function ()// вызов функции при нажатии кнопки "play"
+
+            //движение обектов в сцене (изменение атрибута "enabled" на значение "true")
+
+            {
+                var od = document.getElementById("time1").setAttribute("enebled");
+                document.getElementById("time1").setAttribute("enabled", od = "true");
+
+                var od = document.getElementById("time2").setAttribute("enebled");
+                document.getElementById("time2").setAttribute("enabled", od = "true");
+            }
+
+            document.getElementById("stop").onclick = function () // вызов функции при нажатии кнопки "stop"
+            {
+                // остановка обектов в сцене (изменение атрибута "enabled" на значение "false")
+
+                var od = document.getElementById("time1").setAttribute("enebled");
+                document.getElementById("time1").setAttribute("enabled", od = "false");
+
+                var od = document.getElementById("time2").setAttribute("enebled");
+                document.getElementById("time2").setAttribute("enabled", od = "false");
+            }
+
+            document.getElementById('scale').onclick = function () // вызов функции при нажатии кнопки "size"
+            {
+                var click0 = 0;
+                {
+                    click0 = 1 + click0;
+                    if (click0 < 5) { // изменение атрибута "scale" для шатла
+                        var ChangeScale = document.getElementById("shuttle").getAttribute("scale");
+                        var sc = ChangeScale.split(' ');
+                        sc[0] = 1.1 * sc[0];
+                        sc[1] = 1.1 * sc[1];
+                        sc[2] = 1.1 * sc[2];
+                        fmul = String(sc[0] + ' ');
+                        fmul = String(fmul + sc[1] + ' ');
+                        fmul = String(fmul + sc[2]);
+                        document.getElementById('shuttle').setAttribute("scale", fmul);
+
+                    }
+                }
+            }
+        }
+    </script>
+    <center>
+        <button id="stop"> Stop </button>
+        <button id="play"> Play </button>
+        <button id="scale"> Size </button>
+    </center>
+    <x3d id='x3dElement' showStat='false' showLog='false' style='width:100%; height:100%; border:0'>
+        <scene DEF='scene'>
+            <Background skyAngle='3' skyColor='0.9 0.6 1 2 2 2'></Background>
+
+            <Viewpoint position="-50.22763 30.96713 50.96194" orientation="-0.32268 -0.85355 0.40906 1.11732"
+                       zNear="25.91634" zFar="106.95241" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+            <Viewpoint position="-41.14785 46.15518 -47.49159" orientation="0.34903 0.93464 0.06798 3.69457"
+                       zNear="25.91634" zFar="106.95241" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+            <Viewpoint position="72.83295 51.55703 -29.29904" orientation="0.07399 0.93618 0.34365 1.93410"
+                       zNear="25.91634" zFar="106.95241" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+            <Viewpoint position="54.86235 32.09672 62.66627" orientation="-0.02049 0.76598 0.64254 0.75755"
+                       zNear="25.91634" zFar="106.95241" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description=""></Viewpoint>
+
+            <Fog color='1 1 1' fogType='EXPONENTIAL' visibilityRange='190'></Fog>
+
+            <PointLight on='TRUE' intensity='0.01' color='255 239 140' global='false' location='40 60 20' radius='100' shadowIntensity='0.6'> </PointLight>
+
+
+            <Transform translation="0 0 0" rotation='0 0 0 0'>
+
+                <Transform id="cosmoleti" DEF="cosmoleti" translation="10 5 40">
+                    <timeSensor id="time1" DEF="time1" cycleInterval="10" loop="true" enabled="true"></timeSensor>
+                    <PositionInterpolator DEF="move" key="0 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1" keyValue="'10 5 40 '10 5 30 '10 5 20 '10 5 10 '10 5 0 '10 5 -10 '10 5 -20 '10 5 -30 '10 5 -40"></PositionInterpolator>
+                    <PositionDamper DEF="Posit" tau="1"></PositionDamper>
+
+
+                    <Transform translation='5 5 0'>
+                        <Shape DEF="cosmolet1">
+                            <IndexedFaceSet solid="false" coordIndex="0 1 3 2  -1  4 5 7 6  -1  4 10 11 5  -1  2 3 9 8  -1  9 8 6 7 -1  0 10 11 1  -1  12 13 14  -1  15 16 17  -1  0 10 4 6 8 2  -1  1 11 5 7 9 3  -1  18 19 20">
+                                <Coordinate point="
+     0 0 0,0 0.5 0,0 0 2,0 0.5 2,
+	 1.5 0 0,1.5 0.5 0,1.5 0 2,1.5 0.5 2
+	 0.75 0 2.25,0.75 0.5 2.25,
+	 0.75 0 -0.625,0.75 0.5 -0.625,
+	 0 0.25 0.0625,0 0.25 1.75,-0.75 0.25 1.25
+     1.5 0.25 0.0625,1.5 0.25 1.75,2.25 0.25 1.25
+     0.75 0.5 1.375,0.75 0.875 2.125,0.75 0.5 2.125
+					"></Coordinate>
+                            </IndexedFaceSet>
+                            <Appearance>
+                                <ImageTexture url='shatl floor.jpg'></ImageTexture>
+                                <TextureTransform scale="1 1"></TextureTransform>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+
+                    <Transform translation="10 5 -5">
+                        <Shape USE="cosmolet1"></Shape>
+                    </Transform>
+
+
+                    <Transform translation="15 5 0">
+                        <Shape USE="cosmolet1"></Shape>
+                    </Transform>
+                    <Route fromNode="time1" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
+                    <Route fromNode="move" fromField="value_changed" toNode="Posit" toField="set_destination"></Route>
+                    <Route fromNode="move" fromField="value_changed" toNode="cosmoleti" toField="translation"></Route>
+
+                </Transform>
+
+                <Transform translation='-20 0 -20' scale='6 4 6'>
+
+                    <Shape>
+
+                        <ElevationGrid xDimension="7" zDimension="6" xSpacing="2.0" zSpacing="2.0" solid="false"
+                                       height="-1.5, 1, 0.5, 0.5, 1, 1.5,0,
+
+   -1, 0.5, 0.25, 0.25, 0.5, 2,0,
+
+   0.5, 0.25, 0, 0, 0.25, 0.5,0,
+
+   0.5, 0.25, 0, 0, 0.25, 0.5,0,
+
+   -1, 0.5, 0.25, 0.25, 0.5, 1,0,
+
+   -1.5, 0, 0.5, 0.5, 2, 1.5,0">
+
+                        </ElevationGrid>
+
+                        <Appearance>
+
+                            <ImageTexture url='z3.jpg'></ImageTexture>
+                            <TextureTransform scale="7 7"></TextureTransform>
+
+                        </Appearance>
+
+                    </Shape>
+
+                </Transform>
+
+                <Transform def="oblaka" translation='0 7 -10'>
+                    <timeSensor DEF="time" cycleInterval="40" loop="true"></timeSensor>
+                    <PositionInterpolator DEF="move" key="0 0.5 1" keyValue="'5 5 -5 '5 5 15 '5 5 -5"></PositionInterpolator>
+                    <ColorInterpolator DEF="ColInt" key="0 0.33 0.66 1" keyValue="1 0 0, 0 1 0, 0 0 1, 1 0 0"> </ColorInterpolator>
+
+                    <Shape def="obl">
+                        <Appearance>
+                            <Material DEF="OBLс" diffuseColor="0.1 1 1">
+                        </Appearance>
+                        <TriangleSet solid='false' ccw='true' colorPerVertex='true' normalPerVertex='true' containerField='geometry'>
+                            <Coordinate point='-4 1 3 -2 2 1 -3 4 0 0 2 0 2 3 1 -2 3 1 5 5 -2 4 3 1 6 4 2 4 5 7 8 9' />
+                        </TriangleSet>
+                    </Shape>
+
+                    <Route fromNode="time" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
+                    <Route fromNode="move" fromField="value_changed" toNode="oblaka" toField="translation"></Route>
+                    <Route fromNode="time" fromField="fraction_changed" toNode="ColInt" toField="set_fraction"></Route>
+                    <Route fromNode="ColInt" fromField="value_changed" toNode="OBLс" toField="set_diffuseColor"></Route>
+
+                </Transform>
+
+                <Transform def="oblaka1" translation=25 15 10">
+                    <timeSensor DEF="time" cycleInterval="40" loop="true"></timeSensor>
+                    <PositionInterpolator DEF="move" key="0 0.5 1" keyValue="'25 15 -5 '25 15 15 '25 15 -5"></PositionInterpolator>
+                    <Shape USE="obl"></Shape>
+                    <Route fromNode="time" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
+                    <Route fromNode="move" fromField="value_changed" toNode="oblaka1" toField="translation"></Route>
+                </Transform>
+
+                <Transform id="shuttle" def="shuttle" scale="0.8 0.8 0.8" translation="25 15 -30" rotation='-2 0 0 1.414'>
+                    <timeSensor id="time2" DEF="time2" cycleInterval="6" loop="true" enabled="true"></timeSensor>
+                    <PositionInterpolator DEF="move" key="0 0.2 0.4 0.6 0.8 1" keyValue="'25 15 -30, 25 15 -15, 25 15 0, 25 15 15, 25 15 30, 25 15 45"></PositionInterpolator>
+                    <PositionChaser DEF="PosCh" duration="0.6"></PositionChaser>
+                    <Anchor url="https://www.spacex.com/" parameter="target='_self'"></Anchor>
+                    <Inline url="Shuttle.x3d"></Inline>
+                    <Route fromNode="time2" fromField="fraction_changed" toNode="move" toField="set_fraction"></Route>
+                    <Route fromNode="move" fromField="value_changed" toNode="PosCh" toField="set_destination"></Route>
+                    <Route fromNode="PosCh" fromField="value_changed" toNode="shuttle" toField="translation"></Route>
+                </Transform>
+
+
+
+            </Transform>
+
+        </scene>
+
+    </x3d>
+
+</body>
+
+</html>
