@@ -5,19 +5,22 @@
 	<link rel="shortcut icon" href="htmlres/icon.ico" type="image/x-icon">
 	<title>rankoroff</title>
 	<style>
-	#fn {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(htmlres/fon.jpg); background-size: cover; background-attachment: fixed; background-position: center; border: 0px solid black;}
-	#ft {position: fixed; height: 100%; left: 15%; right: 15%; border: 4px solid black; /* Параметры границы */}
-	#vk {position: absolute; top: 0%; right: 0%;}
+		#fn {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url(htmlres/fon.jpg); background-size: cover; background-attachment: fixed; background-position: center; border: 0px solid black;}
+		#ft {position: absolute; height: 100%; left: 15%; right: 15%; border: 0;}
+		#vp1 {height: 15%; left: 15%; right: 15%; border: 5px solid black; background-color: rgba(255, 255, 255, 0.5);}
+		#vp2 {margin-top: 1px; height: 100%; left: 15%; right: 15%; border: 5px solid black; background-color: rgba(255, 255, 255, 0.5);}
 	</style>
 </head>
 
 <body>
-<div id="fn">
-<div id="ft">
-<font size="6" color="blue">Работы:</font>
-<p><a href="https://rankoroff.github.io/lr5/"><img src="htmlres/W1.png" width="80" height="50" alt="W1"></a></p>
-<a href="https://vk.com/rankoroff"><img src="htmlres/VK.jpg" width="180" height="130" alt="VK" id="vk"></a>
-</div>
-</div>
+	<div id="fn">
+		<div id="ft">
+			<div id="vp1" style="text-align: center;"><a href="https://vk.com/rankoroff"><img src="htmlres/VK.jpg" height="100%" alt="VK"></a></div>
+			<div id="vp2">
+				<font size="6" color="blue">Работы:</font>
+				<p><a href="https://rankoroff.github.io/lr5/"><img src="htmlres/W1.png" width="80" height="50" alt="W1"></a></p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
