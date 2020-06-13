@@ -1,4 +1,3 @@
-[VK](https://vk.com/rankoroff)
 ------------------------------
-RANKOROFF
+[RANKOROFF](https://vk.com/rankoroff)
 ------------------------------
