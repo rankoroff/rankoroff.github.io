@@ -1,8 +1,8 @@
 document.onload = function()
 {
-    document.getElementById("stop").onclick = function() //вызов функции при нажатии кнопки "stop"
+    document.getElementById("stop").onclick = function() //РѕСЃС‚Р°РЅРѕРІРєР° РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "false")
     { 
-        //остановка обектов в сцене (изменение атрибута "enabled" на значение "false")
+        //РѕСЃС‚Р°РЅРѕРІРєР° РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "false")
 
         var od = document.getElementById("time").setAttribute("enebled");
         document.getElementById("time").setAttribute("enabled", od="false");
@@ -11,9 +11,9 @@ document.onload = function()
         document.getElementById("time2").setAttribute("enabled", od="false");
     }
 
-    document.getElementById("play").onclick = function() //вызов функции при нажатии кнопки "play"
+    document.getElementById("play").onclick = function() //РґРІРёР¶РµРЅРёРµ РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "true")
     { 
-        //движение обектов в сцене (изменение атрибута "enabled" на значение "true")
+        //РґРІРёР¶РµРЅРёРµ РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "true")
 
         var od = document.getElementById("time").setAttribute("enebled");
         document.getElementById("time").setAttribute("enabled", od="true");
@@ -23,9 +23,9 @@ document.onload = function()
     }
 }
 
-function fun1() //вызов функции при регулировании ползунка (изменение размера плота)
+function fun1() //РґРІРёР¶РµРЅРёРµ РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "true")
 {
-                    //изменение атрибута "scale" для уменьшения и увеличения плота
+                    //РґРІРёР¶РµРЅРёРµ РѕР±РµРєС‚РѕРІ РІ СЃС†РµРЅРµ (РёР·РјРµРЅРµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° "enabled" РЅР° Р·РЅР°С‡РµРЅРёРµ "true")
 
                     si = document.getElementById("r1").value;
 					ChangeScale = document.getElementById("plot").getAttribute("scale");
@@ -36,7 +36,7 @@ function fun1() //вызов функции при регулировании ползунка (изменение размера пл
 					fmul = String(sc[0] + ' '+ sc[1] + ' '+ sc[2]);
 	      			document.getElementById('plot').setAttribute("scale", fmul);             
    
-    var rng=document.getElementById('r1'); //rng - это ползунок
-    var i1=document.getElementById('i1'); //i1 - input (вывод значения ползунка)
+    var rng=document.getElementById('r1'); //rng - СЌС‚Рѕ РїРѕР»Р·СѓРЅРѕРє
+    var i1=document.getElementById('i1'); //i1 - input (РІС‹РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ РїРѕР»Р·СѓРЅРєР°)
     i1.value=rng.value;
 }
